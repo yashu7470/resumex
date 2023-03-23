@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="script" href="F:\vs code\WebDevelopment\JavaScript Tutorial\js programs\wishh\themes.js">
+    <!-- link rel="html" href="F:\vs code\WebDevelopment\JavaScript Tutorial\js programs\wishh\images.html" -->
+    <style>
+         body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            background-attachment: fixed;
+        } 
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-family: cursive;
+            text-shadow: 1px 1px black;
+            color: rgb(9, 226, 179);
+            /* animation: blink 2s ease-in infinite alternate; */
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: #fb00b9;
+            stroke: rgb(0, 0, 0);
+        }
+
+        .allitems {
+            position: sticky;
+        }
+
+        .stkclass {
+            width: 100px;
+            height: 100px;
+        }
+
+        .tanupic {
+            /* width: 124px;
+            height: 124px;
+            display: flex;
+             position: relative;
+            top: -36px;
+            left: -36px; 
+            padding: 2px;
+          margin: 2px;
+           */
+            border: 1px solid black;
+            width: 150px;
+            box-shadow: 2px 2px black;
+            height: 150px;
+            display: flex;
+            position: relative;
+            top: -38px;
+            left: -63px;
+            padding: 0px;
+            margin: auto;
+        }
+
+        .TP {
+            border: 1px solid rgb(0, 0, 0);
+            width: 60px;
+            box-shadow: 2px 2px 17px red;
+            height: 60px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 15px;
+            animation: zoom 2s ease-in infinite alternate;
+        }
+
+        @keyframes zoom {
+            from {
+                box-shadow: 3px 3px 17px red;
+            }
+
+            to {
+                box-shadow: 3px 3px 17px blue;
+            }
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+            padding: 5px;
+            margin: 0px;
+            font-size: 15px;
+            font-family: monospace;
+            color: blue;
+            text-decoration: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: rgb(8, 86, 231);
+        }
+
+        a:hover {
+            color: rgb(7, 108, 223);
+            text-shadow: 1px 1px black;
+        }
+
+        /* .h1sec{
+            position: sticky;
+            top: 0px;
+            
+            background-color: aqua;
+            width: 100vw;
+
+        } */
+
+        @keyframes blink {
+            from {
+                text-shadow: 2px 2px 13px green;
+            }
+
+            to {
+                text-shadow: 2px 2px 13px red;
+            }
+        }
+
+        /* .inputSec {
+
+            background-color: #1ee9c44f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            margin: auto;
+            padding: 50px;
+            border: 1px solid black;
+            width: 190px;
+            position: relative;
+            top: 29px;
+            box-shadow: 2px 2px 13px #2450f1;
+            animation: round 3s ease-in infinite alternate;
+        } */
+
+        @keyframes round {
+            from {
+                border-color: aqua red green yellow;
+            }
+
+            to {
+                border-color: red aqua yellow green;
+            }
+        }
+
+        #tbl {
+            animation: tbb 0.1s ease-in infinite alternate;
+        }
+
+        @keyframes tbb {
+            from {
+                color: #117de2;
+            }
+
+            to {
+                color: rgb(22, 240, 33);
+            }
+        }
+
+        /* input {
+            margin: auto;
+
+        }
+
+        .button {
+            margin: auto;
+            padding: 12px;
+            border: 2px solid #cb7878;
+            border-radius: 50px;
+        } */
+
+        .Uresumesec {
+            /* border: 2px solid black;
+            width: 500px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            font-family: none;
+        }
+
+        .resumesec {
+            background-color: white;
+            border: 2px solid rgb(9, 226, 179);
+            width: 380px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            justify-items: center;
+            align-content: center;
+            padding: 20px;
+            font-size: 12px;
+            box-shadow: 2px 2px 30px blue;
+            /* box-shadow: none;  */
+            /* animation: ring2 2s ease-in infinite alternate;
+
+            animation-play-state: running; */
+        }
+
+        .aboutsec {
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        h4 {
+            font-size: 10px;
+            margin: 0px;
+        }
+
+        .profilePic {
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgb(9, 226, 179);
+            border-radius: 50px;
+            animation: ring 1s ease-in infinite alternate;
+        }
+
+        /* 
+        @keyframes ring {
+
+            25% {
+                border-width: 2px;
+                border-color: blue red gold green;
+            }
+
+            50% {
+                border-width: 2px;
+                border-color: green blue red gold;
+            }
+
+            75% {
+                border-width: 2px;
+                border-color: gold green blue red;
+            }
+
+            100% {
+                border-width: 2px;
+                border-color: red gold green blue;
+            } */
+        /* from {
+                border-width: 2px;
+               0% {border-color: blue red gold green;} 
+            }
+
+             to {
+                border-width: 2px;
+                border-color: green gold red blue;
+            }  
+        }
+
+        /* @keyframes ring2 {
+
+            25% {
+                border-width: 2px;
+                border-color: blue red gold green;
+                 box-shadow: 2px 2px 30px blue;
+            }
+
+            50% {
+                border-width: 2px;
+                border-color: green blue red gold;
+                 box-shadow: 2px 2px 30px red;
+            }
+
+            75% {
+                border-width: 2px;
+                border-color: gold green blue red;
+                 box-shadow: 2px 2px 30px gold;
+            }
+
+            100% {
+                border-width: 2px;
+                border-color: red gold green blue;
+                 box-shadow: 2px 2px 30px aqua;
+            }
+        } */
+
+        .contactus {
+            border: 1px solid rgb(9, 226, 179);
+            width: 335px;
+            height: 350px;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(21, 208, 233, 0.315);
+            box-shadow: 3px 3px 20px blue;
+            font-family: 'fangsong';
+        }
+
+        #inpsec {
+            font-family: 'fangsong';
+        }
+
+        .inpclass {
+            padding: 3px;
+            margin: 8px;
+            border: 1px solid aqua;
+            animation: walk 1s ease-in infinite alternate;
+        }
+
+        /* @keyframes walk {
+
+            0% {border-color: aqua gold red green;  }
+
+            50% {border-color: green aqua gold red;}
+
+            100% {border-color: red green  aqua gold;}
+
+            /* from {
+                box-shadow: 2px 2px 5px rgb(240, 11, 3);
+            }
+
+            to {
+                box-shadow: 2px 2px 5px rgb(145, 221, 5);
+            } */
+        /* } */
+
+        #btnbg:hover {
+            background-color: aqua;
+        }
+
+        #hr {
+            width: 50%;
+        }
+
+        .navbar {
+            border: 1px solid black;
+            width: 31%;
+            height: 50px;
+        }
+
+        .footerbtn {
+            padding: 10px;
+            margin: 10px;
+            background-color: powderblue;
+            border: 2px solid rgb(9, 226, 179);
+            box-shadow: 2px 2px 10px blue
+        }
+
+        .footerbtn:hover {
+            background-color: aqua;
+        }
+
+      
+        
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+
+        
+    </style>
+
+    <title>my resume - about to yash</title>
+</head>
+
+<body  oncontextmenu="return false" oncopy="return false" onpaste="return false">
+
+
+
+
+    <div class="Uresumesec">
+
+        <h1>About me</h1>
+        <div id="resu" class="resumesec">
+            <div class="aboutsec">
+                <img id="profileimg" class="profilePic" src="yashh\yash2.jpg" alt="">
+                <h3>Yash Choudhary</h3>
+                <h4>Address: Jabalpur - 482001, India <br> Mobile No: 7470385867, <br> Email: yash888990@gmail.com
+                </h4>
+            </div>
+            <p><u><b>Objective:</b></u>To pursue a job opportunity in a competitive environment that will challenge me
+                to push my boundaries and expand my knowledge in the field of computer science while allowing me to add
+                value to the dynamics of the company.</p>
+
+            <p> <u><b>Qualification:</b></u> <br> BTech in Computer Science <br> Global Engineering Collage <br> 2020 -
+                2024
+
+            </p>
+            <p><u><b>Skills: </b></u> <br> • C <br> • C++ <br> • Core Java <br> • Css <br> •Html
+            <p><u><b>Certificates: </b></u> <br> • AWS – AIML Certificate
+                <br> • PCAP- Programming Essentials in Python
+                <br> • Linux Essentials
+                <br> • Cyber Security
+
+            </p>
+            <p> <u><b>Personal Details: </b></u> <br> Name : </b> Yash Choudhary <br> DOB : </b> 11 jan 2002 <br> Gender
+                : </b> Male <br> Nationality : </b> Indian <br> Languages : </b> Hindi And English <br> Hobbies : </b>
+                Songs listning and Gaming</p>
+
+        </div>
+
+        <br> <br>
+        <hr id="hr">
+
+
+        <div class="contactus">
+            <h3 id="h3">Connect with me</h3>
+            <li><a id="sml1" href="https://www.instagram.com/___yash_u_/">Instagram</a></li>
+            <li> <a id="sml2" href="https://www.linkedin.com/in/yash-choudhary-308b32249/">Linkedin</a></li>
+            <li> <a id="sml3" href="https://github.com/yashu7470">Github</a></li> <br>
+
+            <p id="inpsec"> Enter the password and see my pictures. </p>
+            <input class="inpclass" placeholder="Enter my name" id="fpass"
+                style="width: 150px; height:25px; text-align: center; " type="password">
+            <br>
+            <input id="btnbg" class="inpclass" style="width: 90px; height:25px; text-align: center; " type="button"
+                value="Submit" onclick="ShowPic()">
+        </div> <br>
+        <hr id="hr">
+        <div class="uresumesec">
+
+            <button class="footerbtn" onclick=" ToggleReadMode(); Playkeypress()">ReadMode</button>
+            <button id="btnc" class="footerbtn" onclick=" changePP(); Playkeypress()">AmbientMode</button>
+
+            <button class="footerbtn" onclick="crc(); Playkeypress()">InvertMode</button>
+            <button class="footerbtn" onclick="cc(); Playkeypress()">ShadowC</button> <br>
+
+
+            <hr id="hr">
+
+        </div>
+        <audio id="keypress">
+            <source src="music\key.wav" type="audio/ogg">
+            <source src="music\key.wav" type="audio/mpeg">
+        </audio>
+
+
+
+
+    </div>
+    <!-- <div class="h1sec">
+        <h2 style="font-size: 35px;font-family: cursive;"></h2>
+        <h1 style="text-align: center; width: 100%;  font-size: 30px;">Goodmorning 😊</h1>
+
+        <h2 id="tbl" style="text-align: center; font-size: 28px; color: red;"><img width="100px" height="100px"
+                class="stkclass" src="stk\stk1.png" alt="">Tap this block<img width="100px" height="100px"
+                class="stkclass" src="stk\stk3.png" alt=""></h2>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="tanuPic">
+        <ul class="listsec">
+            <li class="TP">Y</li>
+            <li class="TP">A</li>
+            <li class="TP">S</li>
+            <li class="TP">H</li>
+        </ul>
+        <div class="parentinput">
+        </div>
+
+        <div class="inputSec">
+            <input type="text" value="" name="fname" id="fname">
+            <br>
+            <input class="button" type="button" value="Submit" onclick="ShowPic()">
+
+        </div>
+    </div> -->
+
+
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
